@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<title>نشاط رياضي في الهواء الطلق</title>
+<rect width="640" height="360" fill="#ccfbf1"/><circle cx="525" cy="74" r="39" fill="#fbbf24"/>
+<path d="M0 274q120-80 260-5t380-30v121H0" fill="#99f6e4"/>
+<path d="M0 323h640" stroke="#0f766e" stroke-width="5"/>
+<circle cx="338" cy="85" r="27" fill="#d69b73"/>
+<path d="m318 119-55 78 75 35 42-90" fill="#7c3aed"/>
+<path d="m310 231-64 28-40 53m116-88 64 49 64 3m-149-141-49 20-38-20m148 8 50 42 42-35" fill="none" stroke="#172554" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M119 114h80m-110 38h96m-68 38h68" stroke="#5eead4" stroke-width="8" stroke-linecap="round"/>
+<circle cx="520" cy="290" r="30" fill="#f59e0b" stroke="#172554" stroke-width="3"/>
+<path d="M490 290h60m-30-30q-30 30 0 60m0-60q30 30 0 60" fill="none" stroke="#172554" stroke-width="3"/>
+</svg>

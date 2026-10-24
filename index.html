@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مشروع طلابي لدليل فعاليات الجامعة الافتراضية السورية، يجمع الأنشطة الثقافية والتقنية والرياضية.">
+  <title>الرئيسية | دليل فعاليات الجامعة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+<header>
+<a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
+<nav class="navbar navbar-expand-lg py-3" aria-label="القائمة الرئيسية">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><span class="brand-mark" aria-hidden="true">ف</span>دليل فعاليات الجامعة</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="فتح القائمة">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">الفعاليات</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+      </ul>
+      <a class="btn btn-primary btn-sm" href="events.html">اكتشف الفعاليات</a>
+    </div>
+  </div>
+</nav>
+</header>
+<main id="main-content">
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4 g-lg-5">
+        <div class="col-lg-6">
+          <p class="eyebrow mb-3">الجامعة تجمعنا، والفعاليات تقرّبنا</p>
+          <h1 class="display-5 mb-3">تعلّم، شارك،<br>واصنع <span>ذكريات جديدة.</span></h1>
+          <p class="mb-4">من ورشات التقنية إلى اللقاءات الثقافية والأنشطة الرياضية، اكتشف ما يناسب اهتماماتك وشارك التجربة مع زملائك.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a class="btn btn-primary" href="events.html">تصفّح الفعاليات <span aria-hidden="true">←</span></a>
+            <a class="btn btn-outline-primary" href="#featured">شاهد الفعاليات البارزة</a>
+          </div>
+          <p class="small mt-4 mb-0">دليل طلابي تجريبي · الجامعة الافتراضية السورية</p>
+        </div>
+        <div class="col-lg-6">
+          <img class="hero-picture" src="assets/img/campus.svg" alt="رسم لطلاب يشاركون في لقاء جامعي حول طاولة" width="640" height="480" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space" id="featured" aria-labelledby="featured-title">
+    <div class="container">
+      <h2 class="section-heading h3" id="featured-title">فعاليات بارزة تستحق التجربة</h2>
+      <p class="section-note mb-4">اختياراتنا من فعاليات الأسبوع الأول من نوفمبر ٢٠٢٦.</p>
+      <!-- سلايدر يدوي باستخدام Bootstrap؛ لا يتغير تلقائياً أثناء القراءة. -->
+      <div id="featured-carousel" class="carousel slide featured-box" data-bs-interval="false" role="region" aria-roledescription="عارض شرائح" aria-label="الفعاليات البارزة">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-6">
+              <div class="featured-text">
+                <span class="badge text-bg-warning mb-3">تقنية</span>
+                <h3 class="h3 fw-bold">ورشة تصميم أول موقع ويب</h3>
+                <p class="featured-date">٢ نوفمبر ٢٠٢٦ · عبر الإنترنت</p>
+                <p>خطوتك الأولى في HTML وCSS، مع تطبيق عملي بسيط يناسب المبتدئين.</p>
+                <a href="event.html?id=web" class="btn btn-light">اعرف أكثر عن الفعالية</a>
+              </div>
+            </div>
+            <div class="col-md-6"><img src="assets/img/web.svg" alt="رسم توضيحي: ورشة تصميم أول موقع ويب" width="640" height="360"></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-6">
+              <div class="featured-text">
+                <span class="badge text-bg-warning mb-3">ثقافة</span>
+                <h3 class="h3 fw-bold">نادي القراءة: كتاب وقهوة</h3>
+                <p class="featured-date">٤ نوفمبر ٢٠٢٦ · عبر الإنترنت</p>
+                <p>نلتقي لنتبادل الأفكار والانطباعات حول كتاب الشهر في جلسة حوار مفتوحة.</p>
+                <a href="event.html?id=books" class="btn btn-light">اعرف أكثر عن الفعالية</a>
+              </div>
+            </div>
+            <div class="col-md-6"><img src="assets/img/books.svg" alt="رسم توضيحي: نادي القراءة: كتاب وقهوة" width="640" height="360"></div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-6">
+              <div class="featured-text">
+                <span class="badge text-bg-warning mb-3">موسيقى</span>
+                <h3 class="h3 fw-bold">أمسية مواهب موسيقية</h3>
+                <p class="featured-date">٧ نوفمبر ٢٠٢٦ · عبر الإنترنت</p>
+                <p>مساحة لمشاركة المواهب والاستماع إلى مقطوعات يقدمها طلاب الجامعة.</p>
+                <a href="event.html?id=music" class="btn btn-light">اعرف أكثر عن الفعالية</a>
+              </div>
+            </div>
+            <div class="col-md-6"><img src="assets/img/music.svg" alt="رسم توضيحي: أمسية مواهب موسيقية" width="640" height="360"></div>
+          </div>
+        </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-arrow" type="button" data-bs-target="#featured-carousel" data-bs-slide="prev" aria-label="الفعالية السابقة">→</button>
+          <button class="carousel-arrow" type="button" data-bs-target="#featured-carousel" data-bs-slide="next" aria-label="الفعالية التالية">←</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-4" aria-labelledby="categories-title">
+    <div class="container">
+      <h2 class="section-heading h3" id="categories-title">ما الذي يهمّك؟</h2>
+      <p class="section-note">اختر تصنيفاً لعرض الفعاليات المناسبة لك في القائمة أدناه.</p>
+      <div class="d-flex flex-wrap gap-2" role="group" aria-label="تصفية أحدث الفعاليات">
+        <button class="category-button active" type="button" data-category="all" aria-pressed="true">الكل</button>
+        <button class="category-button" type="button" data-category="تقنية" aria-pressed="false">تقنية</button>
+        <button class="category-button" type="button" data-category="ثقافة" aria-pressed="false">ثقافة</button>
+        <button class="category-button" type="button" data-category="رياضة" aria-pressed="false">رياضة</button>
+        <button class="category-button" type="button" data-category="موسيقى" aria-pressed="false">موسيقى</button>
+        <button class="category-button" type="button" data-category="عائلي" aria-pressed="false">عائلي</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-space pt-4" aria-labelledby="latest-title">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+        <h2 class="section-heading h3 mb-0" id="latest-title">أحدث الفعاليات</h2>
+        <a href="events.html" class="text-decoration-none">عرض جميع الفعاليات ←</a>
+      </div>
+      <p id="filter-message" class="section-note small" role="status" aria-live="polite">عدد الفعاليات المعروضة: 6</p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-event-category="تقنية">
+          <article class="card event-card">
+            <img src="assets/img/web.svg" class="card-img-top" alt="رسم توضيحي: ورشة تصميم أول موقع ويب" width="640" height="360" loading="lazy">
+            <div class="card-body d-flex flex-column align-items-start">
+              <span class="badge category-badge mb-3">تقنية</span>
+              <h3 class="card-title h5">ورشة تصميم أول موقع ويب</h3>
+              <p class="event-meta mb-2"><time datetime="2026-11-02">٢ نوفمبر ٢٠٢٦</time> · عبر الإنترنت</p>
+              <p class="card-text">خطوتك الأولى في HTML وCSS، مع تطبيق عملي بسيط يناسب المبتدئين.</p>
+              <a href="event.html?id=web" class="btn btn-outline-primary btn-sm mt-auto">تفاصيل الفعالية <span aria-hidden="true">←</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4" data-event-category="ثقافة">
+          <article class="card event-card">
+            <img src="assets/img/books.svg" class="card-img-top" alt="رسم توضيحي: نادي القراءة: كتاب وقهوة" width="640" height="360" loading="lazy">
+            <div class="card-body d-flex flex-column align-items-start">
+              <span class="badge category-badge mb-3">ثقافة</span>
+              <h3 class="card-title h5">نادي القراءة: كتاب وقهوة</h3>
+              <p class="event-meta mb-2"><time datetime="2026-11-04">٤ نوفمبر ٢٠٢٦</time> · عبر الإنترنت</p>
+              <p class="card-text">نلتقي لنتبادل الأفكار والانطباعات حول كتاب الشهر في جلسة حوار مفتوحة.</p>
+              <a href="event.html?id=books" class="btn btn-outline-primary btn-sm mt-auto">تفاصيل الفعالية <span aria-hidden="true">←</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4" data-event-category="رياضة">
+          <article class="card event-card">
+            <img src="assets/img/sport.svg" class="card-img-top" alt="رسم توضيحي: تحدّي الحركة لطلاب الجامعة" width="640" height="360" loading="lazy">
+            <div class="card-body d-flex flex-column align-items-start">
+              <span class="badge category-badge mb-3">رياضة</span>
+              <h3 class="card-title h5">تحدّي الحركة لطلاب الجامعة</h3>
+              <p class="event-meta mb-2"><time datetime="2026-11-06">٦ نوفمبر ٢٠٢٦</time> · مشاركة عن بُعد</p>
+              <p class="card-text">استراحة من الدراسة ونشاط رياضي خفيف؛ شارك بتحدّيك اليومي مع زملائك.</p>
+              <a href="event.html?id=sport" class="btn btn-outline-primary btn-sm mt-auto">تفاصيل الفعالية <span aria-hidden="true">←</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4" data-event-category="موسيقى">
+          <article class="card event-card">
+            <img src="assets/img/music.svg" class="card-img-top" alt="رسم توضيحي: أمسية مواهب موسيقية" width="640" height="360" loading="lazy">
+            <div class="card-body d-flex flex-column align-items-start">
+              <span class="badge category-badge mb-3">موسيقى</span>
+              <h3 class="card-title h5">أمسية مواهب موسيقية</h3>
+              <p class="event-meta mb-2"><time datetime="2026-11-07">٧ نوفمبر ٢٠٢٦</time> · عبر الإنترنت</p>
+              <p class="card-text">مساحة لمشاركة المواهب والاستماع إلى مقطوعات يقدمها طلاب الجامعة.</p>
+              <a href="event.html?id=music" class="btn btn-outline-primary btn-sm mt-auto">تفاصيل الفعالية <span aria-hidden="true">←</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4" data-event-category="عائلي">
+          <article class="card event-card">
+            <img src="assets/img/family.svg" class="card-img-top" alt="رسم توضيحي: لقاء الألعاب العائلية" width="640" height="360" loading="lazy">
+            <div class="card-body d-flex flex-column align-items-start">
+              <span class="badge category-badge mb-3">عائلي</span>
+              <h3 class="card-title h5">لقاء الألعاب العائلية</h3>
+              <p class="event-meta mb-2"><time datetime="2026-11-08">٨ نوفمبر ٢٠٢٦</time> · عبر الإنترنت</p>
+              <p class="card-text">أسئلة وألعاب جماعية خفيفة تجمع الطلاب وأفراد عائلاتهم في لقاء ممتع.</p>
+              <a href="event.html?id=family" class="btn btn-outline-primary btn-sm mt-auto">تفاصيل الفعالية <span aria-hidden="true">←</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4" data-event-category="ثقافة">
+          <article class="card event-card">
+            <img src="assets/img/books.svg" class="card-img-top" alt="رسم توضيحي: جلسة تبادل خبرات الدراسة" width="640" height="360" loading="lazy">
+            <div class="card-body d-flex flex-column align-items-start">
+              <span class="badge category-badge mb-3">ثقافة</span>
+              <h3 class="card-title h5">جلسة تبادل خبرات الدراسة</h3>
+              <p class="event-meta mb-2"><time datetime="2026-11-10">١٠ نوفمبر ٢٠٢٦</time> · عبر الإنترنت</p>
+              <p class="card-text">نتشارك طرق تنظيم الوقت والمراجعة والتحضير للامتحانات مع زملاء من تخصصات مختلفة.</p>
+              <a href="event.html?id=study" class="btn btn-outline-primary btn-sm mt-auto">تفاصيل الفعالية <span aria-hidden="true">←</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-5" aria-labelledby="team-title">
+    <div class="container">
+      <div class="team-box p-4">
+        <h2 class="section-heading h4" id="team-title">فريق المشروع</h2>
+        <p class="section-note small">مادة BWP401 — الجامعة الافتراضية السورية.</p>
+        <div class="table-responsive">
+          <table class="table team-table align-middle mb-0">
+            <caption class="visually-hidden">أسماء أعضاء الفريق وأرقامهم ومهامهم</caption>
+            <thead><tr><th scope="col">الاسم</th><th scope="col">الرقم الجامعي</th><th scope="col">المهمة</th></tr></thead>
+            <tbody>
+              <tr><td>حيدر جديد</td><td>haidar_344251</td><td>الرئيسية ودمج المشروع</td></tr>
+              <tr><td>مجد نصر</td><td>majd_286313</td><td>عن الدليل واتصل بنا</td></tr>
+              <tr><td>محمد العنباوي</td><td>mohammad_358368</td><td>تفاصيل الفعالية</td></tr>
+              <tr><td>محمد الحسن مارديني</td><td>MOHAMADALHASAN_427840</td><td>الفعاليات والفلترة</td></tr>
+              <tr><td>سنا الحسين</td><td>sana_156745</td><td>التصميم والصور والاختبار</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer pt-5">
+  <div class="container">
+    <div class="row g-4 pb-4">
+      <div class="col-md-6">
+        <h2 class="h5 fw-bold">دليل فعاليات الجامعة الافتراضية</h2>
+        <p class="mb-2">مكان يجمع اهتماماتنا، ويقرّبنا من تجارب جديدة خارج وقت المحاضرات.</p>
+        <small>مشروع طلابي لمادة BWP401. الفعاليات المعروضة أمثلة تعليمية وليست إعلانات رسمية.</small>
+      </div>
+      <div class="col-6 col-md-3">
+        <h3 class="h6 fw-bold">روابط الدليل</h3>
+        <a class="d-block mb-2" href="events.html">جميع الفعاليات</a>
+        <a class="d-block" href="about.html">عن الدليل</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <h3 class="h6 fw-bold">تواصل معنا</h3>
+        <a class="d-block mb-2" href="contact.html">صفحة التواصل</a>
+        <a href="https://github.com/HaidarJaded/svu-events-guide" target="_blank" rel="noopener noreferrer">المشروع على GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom py-3 text-center small">© <span id="current-year">2026</span> فريق دليل الفعاليات — مشروع جامعي تعليمي</div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<title>كتب مفتوحة وفنجان قهوة</title>
+<rect width="640" height="360" fill="#fef3c7"/><circle cx="85" cy="55" r="110" fill="#fde68a"/>
+<rect x="100" y="278" width="430" height="20" rx="10" fill="#d97706"/>
+<rect x="127" y="231" width="245" height="42" rx="6" fill="#7c3aed"/><rect x="144" y="240" width="224" height="23" fill="#ede9fe"/>
+<path d="M302 222q-67-53-151-18V95q82-29 151 20 69-49 151-20v109q-84-35-151 18" fill="#fff" stroke="#172554" stroke-width="5"/>
+<path d="M302 115v107m-122-99q46-9 91 13m-91 17q46-9 91 13m64-30q45-22 91-13m-91 43q45-22 91-13" fill="none" stroke="#c4b5fd" stroke-width="6"/>
+<path d="M442 224h65v35q0 24-32 24t-33-24z" fill="#0f766e"/><path d="M507 231q40-5 25 26h-25" fill="none" stroke="#0f766e" stroke-width="9"/>
+<path d="M464 208q-14-16 0-29m20 29q-14-16 0-29" fill="none" stroke="#d97706" stroke-width="4"/>
+</svg>

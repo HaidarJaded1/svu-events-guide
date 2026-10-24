@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<title>نوتات موسيقية وميكروفون</title>
+<rect width="640" height="360" fill="#ede9fe"/><circle cx="320" cy="180" r="147" fill="#ddd6fe"/>
+<rect x="268" y="58" width="88" height="155" rx="44" fill="#7c3aed"/>
+<path d="M250 167v20a62 62 0 0 0 124 0v-20m-62 83v53m-47 0h94" fill="none" stroke="#172554" stroke-width="10" stroke-linecap="round"/>
+<path d="M288 101h48m-48 24h48m-48 24h48" stroke="#c4b5fd" stroke-width="7"/>
+<path d="M155 194v-80l55-15v78" fill="none" stroke="#0f766e" stroke-width="9"/>
+<ellipse cx="142" cy="197" rx="20" ry="14" fill="#0f766e"/><ellipse cx="197" cy="180" rx="20" ry="14" fill="#0f766e"/>
+<path d="M474 240v-87l40 15" fill="none" stroke="#d97706" stroke-width="9"/><ellipse cx="461" cy="243" rx="20" ry="14" fill="#d97706"/>
+<path d="m103 70 7 18 20 1-16 12 5 20-16-12-17 12 6-20-17-12 21-1z" fill="#f59e0b"/>
+</svg>
