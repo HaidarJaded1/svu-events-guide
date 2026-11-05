@@ -1,3 +1,4 @@
+
 // Contact form validation
 
 const contactForm = document.getElementById("contact-form");
@@ -7,21 +8,30 @@ const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
 
-
 // Display Bootstrap alert
 function showAlert(message, type) {
   formAlert.textContent = message;
-
   formAlert.className = `alert alert-${type} mb-3`;
 }
 
-
 // Validate email format
 function isValidEmail(email) {
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailPattern.test(email);
-}
+  const emailPattern =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/;
 
+  if (!emailPattern.test(email)) {
+    return false;
+  }
+
+  const [localPart, domain] = email.split("@");
+
+  return (
+    !localPart.startsWith(".") &&
+    !localPart.endsWith(".") &&
+    !localPart.includes("..") &&
+    !domain.includes("..")
+  );
+}
 
 // Validate individual field
 function validateField(input, isValid) {
@@ -31,10 +41,8 @@ function validateField(input, isValid) {
   return isValid;
 }
 
-
 // Handle form submission
 contactForm.addEventListener("submit", function (event) {
-
   event.preventDefault();
 
   // Get trimmed values
@@ -58,10 +66,8 @@ contactForm.addEventListener("submit", function (event) {
     message.length >= 10 && message.length <= 1000
   );
 
-
   // Check all fields
   if (!validName || !validEmail || !validMessage) {
-
     showAlert(
       "يرجى التأكد من إدخال جميع البيانات بشكل صحيح.",
       "danger"
@@ -69,7 +75,6 @@ contactForm.addEventListener("submit", function (event) {
 
     return;
   }
-
 
   // Successful validation
   showAlert(
@@ -84,5 +89,4 @@ contactForm.addEventListener("submit", function (event) {
   [nameInput, emailInput, messageInput].forEach(function (input) {
     input.classList.remove("is-valid", "is-invalid");
   });
-
 });
