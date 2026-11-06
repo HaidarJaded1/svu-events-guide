@@ -37,17 +37,153 @@
   <section class="page-header py-5">
     <div class="container">
       <h1>جميع الفعاليات</h1>
-      <p class="mb-0">الصفحة قيد الإنشاء.</p>
+      <p class="mb-0">
+        اكتشف الفعاليات الثقافية والتقنية والرياضية،
+        وابحث عن الفعالية التي تناسب اهتمامك.
+      </p>
     </div>
   </section>
-  <section class="container py-5">
-    <h2 class="h4">قائمة الفعاليات</h2>
-    <p>قائمة الفعاليات قيد الإعداد.</p>
+  <!-- قسم البحث والفلترة -->
+  <section class="container py-5" aria-labelledby="filters-title">
+    <h2 id="filters-title" class="h4 mb-4">البحث والفلترة</h2>
+    <div class="row g-3 align-items-end">
+      <!-- البحث باسم الفعالية -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <label for="event-search" class="form-label">اسم الفعالية</label>
+        <input type="text" id="event-search" class="form-control" placeholder="ابحث عن فعالية...">
+      </div>
+      <!-- الفلترة حسب التصنيف -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <label for="category-filter" class="form-label">التصنيف</label>
+        <select id="category-filter" class="form-select">
+          <option value="">جميع التصنيفات</option>
+          <option value="تقنية">تقنية</option>
+          <option value="ثقافة">ثقافة</option>
+          <option value="رياضة">رياضة</option>
+          <option value="موسيقى">موسيقى</option>
+          <option value="عائلي">عائلي</option>
+        </select>
+      </div>
+      <!-- الفلترة حسب التاريخ -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <label for="date-filter" class="form-label">التاريخ</label>
+        <input type="date" id="date-filter" class="form-control">
+      </div>
+      <!-- الفلترة حسب الموقع -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <label for="location-filter" class="form-label">الموقع</label>
+        <select id="location-filter" class="form-select">
+          <option value="">جميع المواقع</option>
+          <option value="عبر الإنترنت">عبر الإنترنت</option>
+          <option value="مشاركة عن بُعد">مشاركة عن بُعد</option>
+        </select>
+      </div>
+    </div>
+    <button type="button" id="reset-filters" class="btn btn-outline-secondary mt-4">مسح الفلاتر</button>
   </section>
-  <section class="container pb-5">
-    <h2 class="h4">البحث والفلترة</h2>
-    <p>ستتوفر خيارات البحث والتصفية قريباً.</p>
-    <a href="index.html" class="btn btn-primary">العودة إلى الرئيسية</a>
+  <!-- قسم قائمة الفعاليات -->
+  <section class="container pb-5" aria-labelledby="events-title">
+    <h2 id="events-title" class="h4 mb-4">قائمة الفعاليات</h2>
+    <div id="events-list" class="row g-4">
+      <!-- سنضيف بطاقات الفعاليات هنا -->
+      <!-- بطاقة فعالية ورشة تصميم أول موقع ويب -->
+      <div class="col-12 col-md-6 col-lg-4" data-event-title="ورشة تصميم أول موقع ويب" data-event-category="تقنية" data-event-date="2026-11-02" data-event-location="عبر الإنترنت">
+        <article class="card event-card">
+          <img src="assets/img/web.svg" class="card-img-top" alt="رسم توضيحي: ورشة تصميم أول موقع ويب" width="640" height="360" loading="lazy">
+          <div class="card-body d-flex flex-column align-items-start">
+            <span class="badge category-badge mb-3">تقنية</span>
+            <h3 class="card-title h5">ورشة تصميم أول موقع ويب</h3>
+            <p class="event-meta mb-2">
+              <time datetime="2026-11-02">2 تشرين الثاني 2026</time>
+              عبر الإنترنت.
+            </p>
+            <p class="card-text">خطوتك الأولى في HTML وCSS مع تطبيق عملي بسيط يناسب المبتدئين.</p>
+            <a href="event.html?id=web" class="btn btn-outline-primary btn-sm mt-auto">تفاصيل الفعالية</a>
+          </div>
+        </article>
+      </div>
+      <!-- بطاقة فعالية نادي القراءة -->
+      <div class="col-12 col-md-6 col-lg-4" data-event-title="نادي القراءة: كتاب وقهوة" data-event-category="ثقافة" data-event-date="2026-11-04" data-event-location="عبر الإنترنت">
+        <article class="card event-card">
+          <img src="assets/img/books.svg" class="card-img-top" alt="رسم توضيحي: نادي القراءة: كتاب وقهوة" width="640" height="360" loading="lazy">
+          <div class="card-body d-flex flex-column align-items-start">
+            <span class="badge category-badge mb-3">ثقافة</span>
+            <h3 class="card-title h5">نادي القراءة: كتاب وقهوة</h3>
+            <p class="event-meta mb-2">
+              <time datetime="2026-11-04">4 تشرين الثاني 2026</time>
+              عبر الإنترنت.
+            </p>
+            <p class="card-text">نلتقي لنتبادل الأفكار والانطباعات حول كتاب الشهر في جلسة حوار مفتوحة.</p>
+            <a href="event.html?id=books" class="btn btn-outline-primary btn-sm mt-auto">تفاصيل الفعالية</a>
+          </div>
+        </article>
+      </div>
+      <!-- بطاقة فعالية تحدي الحركة -->
+      <div class="col-12 col-md-6 col-lg-4" data-event-title="تحدي الحركة لطلاب الجامعة" data-event-category="رياضة" data-event-date="2026-11-06" data-event-location="مشاركة عن بُعد">
+        <article class="card event-card">
+          <img src="assets/img/sport.svg" class="card-img-top" alt="رسم توضيحي: تحدي الحركة لطلاب الجامعة" width="640" height="360" loading="lazy">
+          <div class="card-body d-flex flex-column align-items-start">
+            <span class="badge category-badge mb-3">رياضة</span>
+            <h3 class="card-title h5">تحدي الحركة لطلاب الجامعة</h3>
+            <p class="event-meta mb-2">
+              <time datetime="2026-11-06">6 تشرين الثاني 2026</time>
+              مشاركة عن بُعد.
+            </p>
+            <p class="card-text">استراحة من الدراسة ونشاط رياضي خفيف؛ شارك بتحديك اليومي مع زملائك.</p>
+            <a href="event.html?id=sport" class="btn btn-outline-primary btn-sm mt-auto">تفاصيل الفعالية</a>
+          </div>
+        </article>
+      </div>
+      <!-- بطاقة فعالية أمسية مواهب موسيقية -->
+      <div class="col-12 col-md-6 col-lg-4" data-event-title="أمسية مواهب موسيقية" data-event-category="موسيقى" data-event-date="2026-11-07" data-event-location="عبر الإنترنت">
+        <article class="card event-card">
+          <img src="assets/img/music.svg" class="card-img-top" alt="رسم توضيحي: أمسية مواهب موسيقية" width="640" height="360" loading="lazy">
+          <div class="card-body d-flex flex-column align-items-start">
+            <span class="badge category-badge mb-3">موسيقى</span>
+            <h3 class="card-title h5">أمسية مواهب موسيقية</h3>
+            <p class="event-meta mb-2">
+              <time datetime="2026-11-07">7 تشرين الثاني 2026</time>
+              عبر الإنترنت.
+            </p>
+            <p class="card-text">مساحة لمشاركة المواهب والاستماع إلى مقطوعات يقدمها طلاب الجامعة.</p>
+            <a href="event.html?id=music" class="btn btn-outline-primary btn-sm mt-auto">تفاصيل الفعالية</a>
+          </div>
+        </article>
+      </div>
+      <!-- بطاقة فعالية لقاء الألعاب العائلية -->
+      <div class="col-12 col-md-6 col-lg-4" data-event-title="لقاء الألعاب العائلية" data-event-category="عائلي" data-event-date="2026-11-08" data-event-location="عبر الإنترنت">
+        <article class="card event-card">
+          <img src="assets/img/family.svg" class="card-img-top" alt="رسم توضيحي: لقاء الألعاب العائلية" width="640" height="360" loading="lazy">
+          <div class="card-body d-flex flex-column align-items-start">
+            <span class="badge category-badge mb-3">عائلي</span>
+            <h3 class="card-title h5">لقاء الألعاب العائلية</h3>
+            <p class="event-meta mb-2">
+              <time datetime="2026-11-08">8 تشرين الثاني 2026</time>
+              عبر الإنترنت.
+            </p>
+            <p class="card-text">أسئلة وألعاب جماعية خفيفة تجمع الطلاب وأفراد عائلاتهم في لقاء ممتع.</p>
+            <a href="event.html?id=family" class="btn btn-outline-primary btn-sm mt-auto">تفاصيل الفعالية</a>
+          </div>
+        </article>
+      </div>
+      <!-- بطاقة فعالية جلسة تبادل خبرات الدراسة -->
+      <div class="col-12 col-md-6 col-lg-4" data-event-title="جلسة تبادل خبرات الدراسة" data-event-category="ثقافة" data-event-date="2026-11-10" data-event-location="عبر الإنترنت">
+        <article class="card event-card">
+          <img src="assets/img/campus.svg" class="card-img-top" alt="رسم توضيحي: جلسة تبادل خبرات الدراسة" width="640" height="360" loading="lazy">
+          <div class="card-body d-flex flex-column align-items-start">
+            <span class="badge category-badge mb-3">ثقافة</span>
+            <h3 class="card-title h5">جلسة تبادل خبرات الدراسة</h3>
+            <p class="event-meta mb-2">
+              <time datetime="2026-11-10">10 تشرين الثاني 2026</time>
+              عبر الإنترنت.
+            </p>
+            <p class="card-text">نتشارك طرق تنظيم الوقت والمراجعة والتحضير للامتحانات مع زملاء من تخصصات مختلفة.</p>
+            <a href="event.html?id=study" class="btn btn-outline-primary btn-sm mt-auto">تفاصيل الفعالية</a>
+          </div>
+        </article>
+      </div>
+    </div>
+    <p id="no-results" class="text-center text-muted py-4 mb-0 d-none" role="status" aria-live="polite">لا توجد فعاليات مطابقة لبحثك. جرب تغيير كلمات البحث أو خيارات الفلترة.</p>
   </section>
 </main>
 <footer class="site-footer pt-5">
@@ -74,5 +210,6 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/events.js"></script>
 </body>
 </html>
