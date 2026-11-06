@@ -11,8 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
   <link href="assets/css/styles.css" rel="stylesheet">
+  <link href="assets/css/event.css" rel="stylesheet">
 </head>
-<body>
+<body class="event-details-page">
 <header>
 <a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
 <nav class="navbar navbar-expand-lg py-3" aria-label="القائمة الرئيسية">
@@ -36,20 +37,151 @@
 <main id="main-content">
   <section class="page-header py-5">
     <div class="container">
-      <h1>تفاصيل الفعالية</h1>
-      <p class="mb-0">الصفحة قيد الإنشاء.</p>
+      <nav aria-label="مسار الصفحة" class="mb-3">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+          <li class="breadcrumb-item"><a href="events.html">الفعاليات</a></li>
+          <li class="breadcrumb-item active" aria-current="page">تفاصيل الفعالية</li>
+        </ol>
+      </nav>
+      <span id="event-category" class="badge category-badge mb-3" hidden></span>
+      <h1 id="event-title">تفاصيل الفعالية</h1>
+      <p id="event-summary" class="mb-0">كل ما تحتاج معرفته قبل المشاركة.</p>
     </div>
   </section>
-  <section class="container py-5">
-    <h2 class="h4">معلومات الفعالية</h2>
-    <p>تفاصيل الفعالية قيد الإعداد.</p>
+
+  <noscript>
+    <div class="container py-5">
+      <p class="alert alert-info">فعّل JavaScript لعرض معلومات الفعالية وأدوات التقويم والمشاركة.</p>
+      <a href="events.html" class="btn btn-primary">جميع الفعاليات</a>
+    </div>
+  </noscript>
+
+  <section id="event-not-found" class="container py-5" aria-labelledby="not-found-title" hidden>
+    <div class="alert alert-warning">
+      <h2 id="not-found-title" class="h4">لم نعثر على هذه الفعالية</h2>
+      <p>قد يكون الرابط غير صحيح. اختر إحدى الفعاليات المتاحة من الدليل.</p>
+      <a href="events.html" class="btn btn-primary">العودة إلى جميع الفعاليات</a>
+    </div>
   </section>
-  <section class="container pb-5">
-    <h2 class="h4">المشاركة والفعاليات ذات الصلة</h2>
-    <p>ستتوفر خيارات المشاركة والفعاليات ذات الصلة قريباً.</p>
-    <a href="index.html" class="btn btn-primary">العودة إلى الرئيسية</a>
-  </section>
+
+  <div id="event-details" hidden>
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <figure class="mb-5">
+            <img id="event-image" src="assets/img/web.svg" class="event-cover" width="640" height="360" alt="رسم توضيحي للفعالية" fetchpriority="high">
+            <figcaption class="small text-muted mt-2">رسم توضيحي من مكتبة صور المشروع.</figcaption>
+          </figure>
+
+          <section class="event-copy mb-5" aria-labelledby="description-title">
+            <h2 id="description-title" class="h3 fw-bold mb-3">عن الفعالية</h2>
+            <div id="event-description"></div>
+            <h3 class="h5 fw-bold mt-4">ماذا ستجد في هذه الفعالية؟</h3>
+            <ul id="event-highlights" class="mb-0"></ul>
+          </section>
+
+          <section class="mb-5" aria-labelledby="gallery-title">
+            <h2 id="gallery-title" class="h3 fw-bold mb-3">معرض الصور</h2>
+            <p class="text-muted">ثلاثة رسوم توضيحية من صور الدليل؛ ليست صوراً موثقة للقاء.</p>
+            <div id="event-gallery" class="row g-3"></div>
+          </section>
+
+          <section aria-labelledby="map-title">
+            <h2 id="map-title" class="h3 fw-bold mb-3">خريطة الوصول للفعالية</h2>
+            <figure class="mb-0">
+              <img src="assets/img/event-access-map.svg" class="event-map border" width="1200" height="480" loading="lazy" alt="مخطط الوصول عن بُعد: جهاز الطالب، ثم صفحة الفعالية، ثم رابط المشاركة في اللقاء؛ ليس موقعاً جغرافياً.">
+              <figcaption class="small text-muted mt-3">
+                مخطط توضيحي للحضور عن بُعد: ١. جهّز جهازك واتصالك، ٢. راجع صفحة الفعالية، ٣. افتح رابط المشاركة عند إعلانه.
+                الفعالية عن بُعد، ولا يوجد موقع حضور جغرافي. رابط المشاركة غير متوفر في هذه النسخة التجريبية.
+              </figcaption>
+            </figure>
+          </section>
+        </div>
+
+        <aside class="col-lg-4" aria-labelledby="event-info-title">
+          <div class="card event-sidebar border rounded-4 p-4">
+            <h2 id="event-info-title" class="h4 fw-bold mb-4">معلومات المشاركة</h2>
+            <dl class="mb-4">
+              <dt class="mb-1">التاريخ</dt>
+              <dd class="mb-3"><time id="event-date"></time></dd>
+              <dt class="mb-1">الوقت</dt>
+              <dd class="mb-3" id="event-time">سيُعلن وقت الفعالية لاحقاً.</dd>
+              <dt class="mb-1">المكان</dt>
+              <dd class="mb-0" id="event-location"></dd>
+            </dl>
+            <div class="d-grid gap-2">
+              <button type="button" id="book-event" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#booking-modal">احجز مكانك — حجز تجريبي</button>
+              <a id="add-to-calendar" class="btn btn-outline-primary" aria-describedby="calendar-note">أضف إلى التقويم</a>
+              <button type="button" id="share-event" class="btn btn-outline-primary">شارك الفعالية</button>
+            </div>
+            <p id="calendar-note" class="small text-muted mt-3 mb-0">يُحفظ تذكير بتاريخ الفعالية طوال اليوم إلى حين الإعلان عن الوقت.</p>
+            <div id="share-fallback" class="mt-3" hidden>
+              <label for="event-share-link" class="form-label small">رابط الفعالية — يمكنك نسخه يدوياً</label>
+              <input id="event-share-link" class="form-control event-share-link" type="text" readonly>
+            </div>
+            <p id="event-action-status" class="small mt-3 mb-0" role="status" aria-live="polite"></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <section class="container pb-5" aria-labelledby="related-title">
+      <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between mb-4">
+        <h2 id="related-title" class="h3 fw-bold mb-0">فعاليات ذات صلة</h2>
+        <a href="events.html">عرض جميع الفعاليات</a>
+      </div>
+      <div id="related-events" class="row g-4"></div>
+    </section>
+  </div>
 </main>
+
+<div class="modal fade" id="booking-modal" tabindex="-1" aria-labelledby="booking-title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="booking-title">حجز تجريبي</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+      </div>
+      <div class="modal-body">
+        <p id="booking-event-name" class="fw-bold"></p>
+        <p class="small text-muted">هذا حجز تجريبي لأغراض المشروع فقط؛ لا يُحجز مقعد فعلي ولا تُرسل بياناتك أو رسالة بريد إلكتروني.</p>
+        <div id="booking-feedback" role="status" aria-live="polite"></div>
+        <form id="booking-form" novalidate>
+          <div class="mb-3">
+            <label for="booking-name" class="form-label">الاسم الكامل</label>
+            <input id="booking-name" name="name" class="form-control" autocomplete="name" minlength="2" maxlength="60" required aria-describedby="booking-name-help">
+            <div id="booking-name-help" class="form-text">من حرفين إلى ٦٠ حرفاً.</div>
+          </div>
+          <div class="mb-4">
+            <label for="booking-email" class="form-label">البريد الإلكتروني</label>
+            <input id="booking-email" name="email" type="email" class="form-control" autocomplete="email" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
+          </div>
+          <button class="btn btn-primary w-100" type="submit">تأكيد الحجز التجريبي</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">إغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<template id="related-event-template">
+  <div class="col-md-6 col-lg-4">
+    <article class="card event-card">
+      <img src="assets/img/web.svg" class="card-img-top" width="640" height="360" alt="" loading="lazy">
+      <div class="card-body d-flex flex-column align-items-start">
+        <span class="badge category-badge mb-3"></span>
+        <h3 class="card-title h5"></h3>
+        <p class="event-meta"></p>
+        <p class="card-text"></p>
+        <a class="btn btn-outline-primary btn-sm mt-auto" href="event.html">تفاصيل الفعالية</a>
+      </div>
+    </article>
+  </div>
+</template>
+
 <footer class="site-footer pt-5">
   <div class="container">
     <div class="row g-4 pb-4">
@@ -74,5 +206,6 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/event.js"></script>
 </body>
 </html>
