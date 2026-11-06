@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title description">
+  <title id="title">خريطة الوصول إلى فعالية عبر الإنترنت</title>
+  <desc id="description">مسار توضيحي من جهاز الطالب إلى صفحة الفعالية ثم رابط المشاركة في اللقاء عن بعد. ليست خريطة لموقع جغرافي.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0v40" fill="none" stroke="#e2e8f0" stroke-width="1"/></pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="m0 0 8 4-8 4" fill="none" stroke="#7c3aed" stroke-width="2"/></marker>
+  </defs>
+  <rect width="1200" height="480" rx="24" fill="#f8fafc"/>
+  <rect width="1200" height="480" rx="24" fill="url(#grid)"/>
+  <path d="M960 240H780q-40 0-40 40v50q0 35-40 35H490q-40 0-40-40v-50q0-35-40-35H245" fill="none" stroke="#ddd6fe" stroke-width="34" stroke-linecap="round"/>
+  <path d="M920 240H780q-40 0-40 40v50q0 35-40 35H490q-40 0-40-40v-50q0-35-40-35H270" fill="none" stroke="#7c3aed" stroke-width="5" stroke-dasharray="12 12" marker-end="url(#arrow)"/>
+  <g transform="translate(880 132)">
+    <rect width="210" height="150" rx="18" fill="#172554"/>
+    <rect x="14" y="14" width="182" height="118" rx="8" fill="#ede9fe"/>
+    <path d="M-12 156h234l-22 24H10Z" fill="#7c3aed"/>
+    <circle cx="105" cy="63" r="22" fill="#f59e0b"/>
+    <path d="M66 118v-10a39 39 0 0 1 78 0v10" fill="#7c3aed"/>
+  </g>
+  <g transform="translate(485 80)">
+    <rect width="225" height="180" rx="18" fill="#fff" stroke="#172554" stroke-width="8"/>
+    <path d="M0 44h225" stroke="#172554" stroke-width="8"/>
+    <circle cx="24" cy="23" r="6" fill="#f59e0b"/>
+    <circle cx="45" cy="23" r="6" fill="#7c3aed"/>
+    <rect x="26" y="68" width="72" height="80" rx="8" fill="#ddd6fe"/>
+    <path d="M120 80h72m-72 26h55m-55 26h62" stroke="#172554" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(95 140)">
+    <rect width="220" height="150" rx="20" fill="#7c3aed"/>
+    <circle cx="76" cy="61" r="23" fill="#fff"/>
+    <path d="M35 125v-7a41 41 0 0 1 82 0v7" fill="#ddd6fe"/>
+    <path d="m145 55 42-22v84l-42-22Z" fill="#f59e0b"/>
+  </g>
+  <g fill="#172554" font-family="Tahoma, sans-serif" font-size="26" font-weight="700" text-anchor="middle">
+    <text x="985" y="370">1</text>
+    <text x="598" y="305">2</text>
+    <text x="205" y="370">3</text>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+.event-details-page [hidden] { display: none !important; }
+.event-cover,
+.event-gallery-image,
+.event-map { display: block; width: 100%; border-radius: 16px; }
+.event-cover { height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.event-gallery-image { height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.event-map { height: auto; background: #f8fafc; }
+.event-sidebar { position: sticky; top: 24px; }
+.event-copy p { max-width: 70ch; }
+.event-details-page .modal-title,
+.event-details-page .card-title,
+.event-details-page h1 { overflow-wrap: anywhere; }
+.event-share-link { direction: ltr; text-align: left; }
+@media (max-width: 991px) {
+  .event-sidebar { position: static; }
+}
